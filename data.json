@@ -1,0 +1,45 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature", 
+            "id": 0, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [60.08466067012826,30.294728746032703]
+            }, 
+            "properties": {
+                "balloonContentHeader": "Площадка для отдыха", 
+                "balloonContentBody": "<p>test</p>", 
+                "clusterCaption": "Площадка для отдыха", 
+                "hintContent": "Площадка для отдыха"
+            }, 
+            "options": {
+                "iconLayout": "default#image", 
+                "iconImageHref": "images/1.png", 
+                "iconImageSize": [30, 42], 
+                "iconImageOffset": [-5, -38]
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 1, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [60.080801493932476,30.287003984069806]
+            }, 
+            "properties": {
+                "balloonContentHeader": "Детская площадка", 
+                "balloonContentBody": "<p>rere</p>", 
+                "clusterCaption": "Детская площадка", 
+                "hintContent": "Детская площадка"
+            }, 
+            "options": {
+                "iconLayout": "default#image", 
+                "iconImageHref": "images/2.png", 
+                "iconImageSize": [30, 42], 
+                "iconImageOffset": [-5, -38]
+            }
+        }
+    ]
+}

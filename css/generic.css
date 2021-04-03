@@ -1,0 +1,30 @@
+html, body { width: 100%; height: 100%; }
+#map { width: 100%; height: 100%; padding: 0; margin: 0;}
+.rform { display: none; }
+.body_select {margin: 0;padding: 0;background: #fff;font-size: 1.0em;}
+.body_select a {color: rgb(38, 55, 77); text-decoration: none;}
+.body_select a:hover {color: #fb9e25;}
+.body_select p {margin-bottom: 1.5em;font-weight: 300;}
+.label {color: #777;text-transform: uppercase;margin-left: 10px;font-size: 0.8em;margin-bottom: 5px;display: block;}
+
+
+.body_select nav ul {padding: 0 20px;}
+.body_select nav li {list-style: none;float: left; margin-right: 20px;padding: 10px;font-weight: 300;}
+.body_select nav li.current {background: #f5f5f5; border: 1px solid #ccc; border-bottom: none;}
+.body_select nav li.current a {color: #777; cursor: default;}
+.body_select .option_a{      display: flex; align-items: center; font-size: 18px; flex-direction: row-reverse; justify-content: flex-end;}
+.body_select .option_ico { height: 32px; margin-right: 12px; }
+
+/* Для мобильных устройств */
+
+@media handheld, only screen and (max-width: 780px) {
+	.body_select {font-size: 16px;-webkit-text-size-adjust: none;}
+	.body_select {width: 100%;min-width: 0;margin-left: 0px;margin-right: 0px;padding-left: 0px;padding-right: 0px;}
+	.body_select .row .sixcol, .body_select .row .twelvecol {width: auto;float: none;margin-left: 0px;margin-right: 0px;}
+	}
+
+/* Для ширины экрана 720px и меньше */
+
+@media (max-width: 720px) {
+ .body_select .trigger, .body_select .activetrigger, .body_select .dropcontainer ul, .body_select .trigger_demo2, .body_select .activetrigger_demo2, .body_select .dropcontainer_demo2 ul {width: 100% !important;}
+}

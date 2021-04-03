@@ -1,0 +1,12 @@
+.box-modal {
+	position: relative;
+	width: 480px;
+	padding: 16px;
+	background: #fff;
+	color: #3c3c3c;
+	font-family: 'PT Sans', sans-serif;
+	box-shadow: 0 0 0 6px rgba(153, 153, 153, .3);
+	border-radius: 16px;
+}
+.box-modal_close { position: absolute; right: 15px; top: 6px; font-size: 54px; line-height: 30px; color: #999; cursor: pointer; }
+.box-modal_close:hover { color: #666; }

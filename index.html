@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map/Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" href="js/arcticmodal/jquery.arcticmodal-0.3.css">
+	<link rel="stylesheet" href="js/arcticmodal/themes/simple.css">
+	<link rel="stylesheet" type="text/css" href="css/generic.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="js/form.css">
+
+</head>
+<body>
+	<div id="map"></div>
+	<div class="rform">
+		<div class="box-modal" id="exampleModal">
+		    <div class="box-modal_close arcticmodal-close">&times;</div>
+		    <section class="a-mail_form demo body_select">
+		        <div class="a-mail_title">Ваши рекомендации</div>
+		        <form action id="create_registry_form" name="registry_form">
+		            <input type="hidden" name="coord" id="coords" value=""> 
+					<select name="type" class="turnintodropdown_demo2">
+						<option>Выберите категорию предложения</option>
+						<option data-img="1.png">Сохранение исторического наследия</option>
+						<option data-img="2.png">Озеленение</option>
+						<option data-img="3.png">Зона отдыха</option>
+						<option data-img="4.png">Уборка мусора</option>
+		                <option data-img="5.png">Установка урны</option>
+		                <option data-img="6.png">Освещение</option>
+					</select>
+
+		            <div class = "a-mail_text a-mail_mail">
+		                <div class="a-mail_text_title a-mail_mail_title">Описание предложения:</div>
+		                <div class="a-mail_mail_text"><textarea cools="40" rows="5" name="mail_description"></textarea></div>
+		            </div>
+		            <hr>
+		            <div>
+		            	<p>Далее идут поля, данные которых не будут публиковаться. Заполнение не обязательно. Просим заполнить поля со звездочками для исследования мнений.</p>
+		            </div>
+		            <div class="a-mail_text a-mail_email">
+		                <div class="a-mail_text_title  a-mail_email_title"></div>
+		                <div class="a-mail_email_text"><input type="text" name="mail_fio" placeholder="Укажите, пожалуйста, Ваше ФИО" /></div>
+		            </div>
+		            <hr>
+		            <div><p>Укажите, пожалуйста, Ваш пол</p></div>
+		            <div class="a-mail_check">
+		                <div class="a-mail_check_line a-mail_check_line1">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="sex" value="1" id="male" checked class="input_blue"/>
+		                            <label for="male" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="male">Мужской</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" value="2" name="sex" id="female" class="input_blue"/>
+		                            <label for="female" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="female">Женский</label></div>
+		                    </div>    
+		                </div>
+		                <div class="a-mail_check_line a-mail_check_line2">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="sex" value="3" id="another" class="input_blue"/>
+		                            <label for="another" class = "label_blue"></label>    
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="another">Другой</label></div>
+		                    </div>
+		                </div>
+		            </div>
+		            <hr>
+		            <div><p>Укажите, пожалуйста, Ваш возраст</p></div>
+		            <div class="a-mail_check">
+		                <div class="a-mail_check_line a-mail_check_line1">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="age" value="1" id="rone" checked class="input_blue"/>
+		                            <label for="rone" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="rone">до 18</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" value="2" name="age" id="rtwo" class="input_blue"/>
+		                            <label for="rtwo" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="rtwo">18-25</label></div>
+		                    </div>    
+		                </div>
+		                <div class="a-mail_check_line a-mail_check_line2">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="age" value="3" id="rthree" class="input_blue"/>
+		                            <label for="rthree" class = "label_blue"></label>    
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="rthree">26-35</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="age" value="4" id="rfour" class="input_blue"/>
+		                            <label for="rfour" class = "label_blue"></label>    
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="rfour">36-45</label></div>
+		                    </div>
+		                </div>
+		                <div class="a-mail_check_line a-mail_check_line2">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="age" value="5" id="rfive" class="input_blue"/>
+		                            <label for="rfive" class = "label_blue"></label>    
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="rfive">45-60</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="age" value="6" id="rsix" class="input_blue"/>
+		                            <label for="rsix" class = "label_blue"></label>    
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="rsix">Старше 60</label></div>
+		                    </div>
+		                </div>
+		            </div>
+		            <hr>
+		            <div><p>Укажите, пожалуйста, Ваше место проживания </p></div>
+		            <div class="a-mail_check">
+		                <div class="a-mail_check_line a-mail_check_line1">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="place" value="Парнас" id="sone" checked class="input_blue"/>
+		                            <label for="sone" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="sone">Парнас</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" value="Парголово" name="place" id="stwo" class="input_blue"/>
+		                            <label for="stwo" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="stwo">Парголово</label></div>
+		                    </div>    
+		                </div>
+		                <div class="a-mail_check_line a-mail_check_line2">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="place" value="Шувалово-Озерки" id="sthree" class="input_blue"/>
+		                            <label for="sthree" class = "label_blue"></label>    
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="sthree">Шувалово-Озерки</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="place" value="Осиновая Роща" id="sfour" class="input_blue"/>
+		                            <label for="sfour" class = "label_blue"></label>    
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="sfour">Осиновая Роща</label></div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="a-mail_check_line a-mail_check_line2">
+		                <input type="text" name="theplace" placeholder="Свой вариант" />
+		            </div>
+		            <hr>
+		            <div><p>Укажите, пожалуйста, Ваше семейное положение</p></div>
+		            <div class="a-mail_check">
+		                <div class="a-mail_check_line a-mail_check_line1">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="fempos" value="1" id="fempos1" checked class="input_blue"/>
+		                            <label for="fempos1" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="fempos1">Замужем/женат </label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" value="2" name="fempos" id="fempos2" class="input_blue"/>
+		                            <label for="fempos2" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="fempos2">Не замужем/ не женат</label></div>
+		                    </div>    
+		                </div>
+		            </div>
+		            <hr>
+		            <div><p>Укажите, пожалуйста, Ваше количество детей</p></div>
+		            <div class="a-mail_check">
+		                <div class="a-mail_check_line a-mail_check_line1">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="cntchild" value="1" id="cntchild1" checked class="input_blue"/>
+		                            <label for="cntchild1" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="cntchild1">Нет детей</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" value="2" name="cntchild" id="cntchild2" class="input_blue"/>
+		                            <label for="cntchild2" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="cntchild2">Один ребёнок</label></div>
+		                    </div>    
+		                </div>
+		                <div class="a-mail_check_line a-mail_check_line1">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="cntchild" value="3" id="cntchild3" class="input_blue"/>
+		                            <label for="cntchild3" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="cntchild3">Два ребёнка</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" value="4" name="cntchild" id="cntchild4" class="input_blue"/>
+		                            <label for="cntchild4" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="cntchild4">Три и более</label></div>
+		                    </div>    
+		                </div>
+		            </div>
+		            <hr>
+		            <div><p>Укажите, пожалуйста, Ваш социальный статус</p></div>
+		            <div class="a-mail_check">
+		                <div class="a-mail_check_line a-mail_check_line1">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="status" value="Работающий" id="status1" checked class="input_blue"/>
+		                            <label for="status1" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="status1">Работающий</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" value="Неработающий" name="status" id="status2" class="input_blue"/>
+		                            <label for="status2" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="status2">Неработающий</label></div>
+		                    </div>    
+		                </div>
+		                <div class="a-mail_check_line a-mail_check_line1">
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" name="status" value="Учащийся (-аяся)" id="status3"  class="input_blue"/>
+		                            <label for="status3" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="status3">Учащийся (-аяся)</label></div>
+		                    </div>
+		                    <div class = "a-mail_check_block">
+		                        <div class="a-mail_check_i">
+		                            <input type="radio" value="Пенсионер" name="status" id="status4" class="input_blue"/>
+		                            <label for="status4" class = "label_blue"></label>  
+		                        </div>
+		                        <div class="a-mail_check_t"><label for="status4">Пенсионер</label></div>
+		                    </div>    
+		                </div>
+		            </div>
+		            <div class="a-mail_check_line a-mail_check_line2">
+		                <input type="text" name="thestatus" placeholder="Свой вариант" />
+		            </div>
+		            <hr>
+		            <div class="a-mail_text a-mail_email">
+		                <div><p>Укажите, пожалуйста, Ваш телефон</p></div>
+		                <div class="a-mail_email_text"><input type="text" name="phone" placeholder="+7(999)999-99-99"></div>
+		            </div>
+
+		        </form>
+		        <button id="createregistry" class="a-i-mail_send">Отправить</button>
+		        <p class="registry_error"></p>
+		    </section>
+		</div>
+	</div>
+</body>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/yamap.js"></script>
+<script src="js/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+<script type='text/javascript' src='js/select_demo2.js'></script>
+<script type='text/javascript' src='js/form.js'></script>
+
+<script>
+	$("#openform").on("click", function(){
+    	$('#exampleModal').arcticmodal();
+	});
+</script>
+
+</html>
